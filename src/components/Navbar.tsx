@@ -119,14 +119,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               <Sparkles className="w-4 h-4" />
             </button>
 
-            {/* Download CV */}
+            {/* Download Resume */}
             <a
               href={PERSONAL_INFO.cvPath}
-              download="Rajhans_Mahato_CV.pdf"
+              download={PERSONAL_INFO.resumeFileName}
               className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/40 hover:bg-cyan-500/20 hover:border-cyan-400 shadow-sm shadow-cyan-900/30 transition-all duration-200"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Download CV</span>
+              <span>Resume</span>
             </a>
           </div>
 
@@ -134,9 +134,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           <div className="flex sm:hidden items-center space-x-2">
             <a
               href={PERSONAL_INFO.cvPath}
-              download="Rajhans_Mahato_CV.pdf"
+              download={PERSONAL_INFO.resumeFileName}
               className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs flex items-center"
-              aria-label="Download CV"
+              aria-label="Download Resume"
+              title="Download Resume"
             >
               <Download className="w-4 h-4" />
             </a>
@@ -187,11 +188,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
             <a
               href={PERSONAL_INFO.cvPath}
-              download="Rajhans_Mahato_CV.pdf"
+              download={PERSONAL_INFO.resumeFileName}
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-cyan-300 bg-cyan-500/15 border border-cyan-500/30"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Get CV</span>
+              <span>Resume</span>
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PERSONAL_INFO } from '../data/portfolioData';
+import { PERSONAL_INFO, CORE_COMPETENCIES } from '../data/portfolioData';
 import { User, Target, Lightbulb, Compass, CheckCircle2 } from 'lucide-react';
 
 export const About: React.FC = () => {
@@ -51,24 +51,20 @@ export const About: React.FC = () => {
               </p>
             ))}
 
-            {/* Core Focus Points */}
+            {/* Core Competencies */}
             <div className="pt-4 border-t border-slate-800/80">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">
-                Key Engineering Focus
+              <h4 className="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-3 flex items-center space-x-2">
+                <span>Core Competencies</span>
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {[
-                  'B.Tech IT Student (2023 - 2027)',
-                  'Full Stack Web Development',
-                  'Clean & Maintainable Code',
-                  'REST APIs & System Integration',
-                  'Algorithmic Problem Solving',
-                  'Modern Developer Tooling'
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center space-x-2 text-xs sm:text-sm text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+              <div className="flex flex-wrap gap-2">
+                {CORE_COMPETENCIES.map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 border border-cyan-500/25 text-xs font-mono text-cyan-300"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                     <span>{item}</span>
-                  </div>
+                  </span>
                 ))}
               </div>
             </div>

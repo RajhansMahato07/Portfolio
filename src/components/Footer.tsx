@@ -63,15 +63,15 @@ export const Footer: React.FC = () => {
               <span>Phone</span>
             </a>
 
-            {/* Download CV */}
+            {/* Download Resume */}
             <a
               href={PERSONAL_INFO.cvPath}
-              download="Rajhans_Mahato_CV.pdf"
+              download={PERSONAL_INFO.resumeFileName}
               className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-cyan-950/40 border border-cyan-500/40 text-xs font-mono text-cyan-300 hover:bg-cyan-900/50 hover:border-cyan-300 transition-colors"
-              aria-label="Download Curriculum Vitae"
+              aria-label="Download Resume"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Download CV</span>
+              <span>Resume</span>
             </a>
 
             {/* Scroll to Top */}

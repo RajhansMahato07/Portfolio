@@ -1,30 +1,41 @@
-# Rajhans Mahato — Futuristic Developer Portfolio
+# Rajhans Mahato — Developer Portfolio
 
-A modern, minimal, dark-themed developer portfolio for **Rajhans Mahato**, Full Stack Developer and B.Tech Information Technology student at Bengal College of Engineering & Technology, Durgapur.
-
-![Portfolio Preview Banner](https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop)
+A modern, minimal, dark-themed developer portfolio for **Rajhans Mahato**, Web Developer and B.Tech Information Technology student at Bengal College of Engineering and Technology, Durgapur.
 
 ---
 
-## ⚡ Core Features & Architectural Highlights
+## ⚡ Core Highlights & Resume Alignment
 
-1. **Futuristic 3D WebGL Background (`Three.js`)**:
-   - Floating wireframe geometries (torus, icosahedron, octahedron, data block cubes).
-   - High-density glowing digital particle cloud with cyan (`#06b6d4`) and electric blue (`#3b82f6`) lighting.
-   - Smooth mouse parallax and scroll tracking.
-   - Built-in `prefers-reduced-motion` detection and mobile performance scaling.
+1. **Header & Profile**:
+   - Web Developer | B.Tech Information Technology
+   - Location: Dhanbad, Jharkhand
+   - Phone: +91 7979044117
+   - Email: rajhansmahato1210@gmail.com
+   - GitHub: [github.com/RajhansMahato07](https://github.com/RajhansMahato07)
 
-2. **Clean, Authentic Information Architecture**:
-   - **Zero fake achievements or falsified claims**: strictly reflects authentic education, skills, and documentation.
-   - **Hero Section**: Quick terminal status badge, direct GitHub link, CV download, and quick contact pills.
-   - **About Section**: Core focus areas, engineering pillars, and student profile.
-   - **Education Timeline**: B.Tech in IT (2023–2027) & Higher Secondary 12th (2022–2023).
-   - **Skills Grid**: Organized by Frontend, Backend, Database, Languages, and Ecosystem. No arbitrary percentages.
-   - **Experience & Internship**: Pre-configured with the **Edu Tantr (VDT EDU TANTR VENTURES PVT LTD)** 3-month AI & ML Training & Internship offer details (Ref: `IOL-EDUJ1632`). Includes clear editable fields for future roles.
-   - **Certificates Gallery**: Real certificate previews (`cert1.jpeg` and `cert2.jpeg`) from `d:\project\certificate\`. Interactive inspection modal, file download, and in-browser import capability.
-   - **Upcoming Projects**: Dedicated pipeline showing future projects (*CloudDev Workspace*, *DevPulse*, *NexusAPI*) with disabled "Coming Soon" demo buttons and a full **Project Detail Architecture Blueprint System**.
-   - **Live GitHub Integration**: Direct profile card with asynchronous repository telemetry from `@RajhansMahato07`.
-   - **Contact & Direct Actions**: Form with client validation, `mailto:` integration, direct phone link, and direct CV download (`Rajhans_Mahato_CV.pdf`).
+2. **Resume Download**:
+   - One-click instant download of the official resume (`Rajhans_Mahato_Resume.pdf`).
+   - Automatically regenerated during build time via `node generate_resume_pdf.js`.
+   - Inlined as Base64 data URI for offline support and also served statically from `dist/` and `public/`.
+
+3. **Featured Projects**:
+   - **ShopEase** — Responsive E-Commerce Web Application (React.js, Node.js, Express.js, MongoDB, Bootstrap, REST APIs).
+   - **StudentHub** — Student Management & Notice Portal (React.js, Node.js, Express.js, MongoDB, CRUD, REST APIs).
+
+4. **Technical Skills & Core Competencies**:
+   - Languages: HTML5, CSS3, JavaScript, C, Java, Python, SQL
+   - Frontend: React.js, Bootstrap, Responsive Web Design, DOM Manipulation
+   - Backend: Node.js, Express.js, REST APIs
+   - Database: MongoDB, MySQL/SQL
+   - Tools: Git, GitHub, VS Code, npm
+   - Core CS: OOP, DBMS, Data Structures, Operating Systems, Computer Networks
+   - Core Competencies: Responsive Web Development, REST API Integration, CRUD Applications, Version Control, Problem Solving, Team Collaboration
+
+5. **Internship & Education**:
+   - **EDU TANTR** — AI/ML Intern (Aug 2025 – Nov 2025).
+   - **B.Tech in Information Technology** — Bengal College of Engineering and Technology, Durgapur (2023 – 2027).
+   - **Class XII** — DGSS Inter College Bandgora, Bokaro (2023, 71%).
+   - **Class X** — TATA DAV School (2019, 70%).
 
 ---
 
@@ -51,16 +62,28 @@ npm run dev
 npm run build
 ```
 
-The application is configured to run at `http://127.0.0.1:5173/`.
-
 ---
 
-## 📝 Customization & Data Management
+## 🌐 Netlify Deployment Guide
 
-All portfolio content is decoupled and located in one clean file:
-👉 **[`src/data/portfolioData.ts`](file:///d:/project/src/data/portfolioData.ts)**
+This project is pre-configured with `netlify.toml` and `public/_redirects` for 100% production-ready Netlify deployment.
 
-- Update social links, bio, or contact information.
-- Add real projects by simply changing `status: 'Completed'` and providing a live demo URL.
-- Drop new certificate files into `public/certificates/` or use the browser "Import Certificate" button.
-- Replace `public/Rajhans_Mahato_CV.pdf` with any updated PDF resume anytime.
+### Method 1: Deploy via GitHub (Recommended)
+1. Push your code to GitHub:
+   ```bash
+   git add .
+   git commit -m "Production ready portfolio with resume"
+   git push origin main
+   ```
+2. Go to [Netlify](https://app.netlify.com/) and click **"Add new site"** -> **"Import an existing project"**.
+3. Select your GitHub repository (`RajhansMahato07/Portfolio`).
+4. Netlify will automatically detect:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+5. Click **"Deploy site"**. Netlify will build and give you a live production URL!
+
+### Method 2: Netlify Drop (Instant Drag & Drop)
+1. Run `npm run build` locally.
+2. Go to [Netlify Drop](https://app.netlify.com/drop).
+3. Drag and drop the `dist` folder directly into the browser window.
+4. Your site goes live instantly with your resume and all assets working perfectly!

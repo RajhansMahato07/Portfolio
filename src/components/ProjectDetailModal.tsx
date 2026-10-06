@@ -127,7 +127,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             <div>
               <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3 flex items-center space-x-2">
                 <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-                <span>Planned Core Features</span>
+                <span>{isCompleted ? 'Key Features & Capabilities' : 'Planned Core Features'}</span>
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {project.features.map((feat, idx) => (
@@ -179,13 +179,22 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         {/* Footer Actions */}
         <div className="p-4 sm:p-5 border-t border-slate-800 bg-slate-950/70 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center space-x-2 text-xs font-mono text-slate-400">
-            <Clock className="w-3.5 h-3.5 text-amber-400" />
-            <span>Currently under active design & planning</span>
+            {isCompleted ? (
+              <>
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <span className="text-emerald-300">Engineered & Tested Full-Stack Application</span>
+              </>
+            ) : (
+              <>
+                <Clock className="w-3.5 h-3.5 text-amber-400" />
+                <span>Currently under active development</span>
+              </>
+            )}
           </div>
 
           <div className="flex items-center space-x-3">
-            {/* Live Demo Button */}
-            {project.liveDemoUrl && isCompleted ? (
+            {/* Live Demo or Repository */}
+            {project.liveDemoUrl ? (
               <a
                 href={project.liveDemoUrl}
                 target="_blank"
@@ -195,16 +204,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 <span>Live Demo</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
-            ) : (
-              <button
-                disabled
-                className="cursor-not-allowed inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-mono text-slate-500 bg-slate-900 border border-slate-800 opacity-75"
-                title="Project under development - Live demo coming soon"
-              >
-                <Clock className="w-3.5 h-3.5" />
-                <span>Live Demo (Coming Soon)</span>
-              </button>
-            )}
+            ) : null}
 
             {/* GitHub Repository */}
             {project.githubUrl ? (

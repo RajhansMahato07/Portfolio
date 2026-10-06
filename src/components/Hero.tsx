@@ -49,13 +49,13 @@ export const Hero: React.FC = () => {
         <div className="flex items-center justify-center space-x-3 mb-6">
           <Code2 className="w-5 h-5 text-cyan-400" />
           <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-slate-300 font-mono">
-            Full Stack Developer
+            {PERSONAL_INFO.title}
           </h2>
           <Cpu className="w-5 h-5 text-blue-400" />
         </div>
 
         {/* Short introduction */}
-        <p className="max-w-2xl text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mb-8 font-normal">
+        <p className="max-w-3xl text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mb-8 font-normal">
           {PERSONAL_INFO.bio}
         </p>
 
@@ -73,14 +73,14 @@ export const Hero: React.FC = () => {
             <ArrowUpRight className="w-4 h-4 opacity-75" />
           </a>
 
-          {/* Download CV */}
+          {/* Download Resume */}
           <a
             href={PERSONAL_INFO.cvPath}
-            download="Rajhans_Mahato_CV.pdf"
+            download={PERSONAL_INFO.resumeFileName}
             className="flex items-center justify-center space-x-2 px-6 py-3 rounded-xl bg-slate-900/80 border border-cyan-500/40 text-cyan-300 hover:text-white font-medium text-sm hover:bg-cyan-950/40 hover:border-cyan-400 backdrop-blur-md shadow-sm transition-all duration-300 transform hover:-translate-y-0.5 w-full sm:w-auto"
           >
             <Download className="w-4 h-4" />
-            <span>Download CV</span>
+            <span>Download Resume</span>
           </a>
         </div>
 

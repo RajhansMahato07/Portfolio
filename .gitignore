@@ -11,3 +11,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.log
+chrome_dom.html
+singlefile_test.html
+test_dom_*.html
+

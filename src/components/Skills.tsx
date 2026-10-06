@@ -9,7 +9,8 @@ import {
   Layers, 
   Check, 
   Sparkles,
-  GitBranch
+  GitBranch,
+  Cpu
 } from 'lucide-react';
 
 export const Skills: React.FC = () => {
@@ -20,7 +21,8 @@ export const Skills: React.FC = () => {
     'Backend Development': <Server className="w-4 h-4 text-blue-400" />,
     'Database Systems': <Database className="w-4 h-4 text-emerald-400" />,
     'Programming Languages': <Terminal className="w-4 h-4 text-amber-400" />,
-    'Tools & Ecosystem': <Wrench className="w-4 h-4 text-purple-400" />
+    'Tools & Ecosystem': <Wrench className="w-4 h-4 text-purple-400" />,
+    'Core Computer Science': <Cpu className="w-4 h-4 text-rose-400" />
   };
 
   const categories = ['All', ...SKILL_CATEGORIES.map((c) => c.category)];
@@ -111,13 +113,13 @@ export const Skills: React.FC = () => {
                 </div>
               </div>
 
-              {/* Editable indicator notice for transparency */}
+              {/* Practical competence indicator */}
               <div className="mt-6 pt-3 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
                 <span className="flex items-center space-x-1">
                   <GitBranch className="w-3 h-3 text-cyan-500/70" />
-                  <span>Verified Stack</span>
+                  <span>Verified Competency</span>
                 </span>
-                <span className="text-cyan-500/80">Configured in data</span>
+                <span className="text-cyan-400/80">Hands-on Experience</span>
               </div>
             </div>
           ))}

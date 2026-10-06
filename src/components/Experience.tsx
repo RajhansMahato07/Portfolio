@@ -36,13 +36,23 @@ export const Experience: React.FC<ExperienceProps> = ({ onViewOfferLetter }) => 
           </p>
         </div>
 
-        {/* Editable Transparency Banner */}
-        <div className="glass-panel p-4 rounded-xl border-cyan-500/20 mb-8 flex items-start space-x-3 bg-cyan-950/20">
-          <Edit3 className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" />
-          <div className="text-xs text-slate-300">
-            <span className="font-semibold text-cyan-300">Note: </span>
-            {INTERNSHIP_DATA.isEditableNote}
+        {/* Verified Credential Banner */}
+        <div className="glass-panel p-4 rounded-xl border-cyan-500/20 mb-8 flex items-center justify-between bg-cyan-950/20 max-w-3xl mx-auto">
+          <div className="flex items-center space-x-3">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <div className="text-xs text-slate-300">
+              <span className="font-semibold text-cyan-300">Verified Credentials: </span>
+              Completed structured internship with EDU TANTR covering practical AI/ML and software engineering.
+            </div>
           </div>
+          {onViewOfferLetter && (
+            <button
+              onClick={onViewOfferLetter}
+              className="hidden sm:inline-flex items-center space-x-1 text-xs font-mono text-cyan-300 hover:text-cyan-200 underline decoration-cyan-500/40 shrink-0 ml-3"
+            >
+              <span>View Documents</span>
+            </button>
+          )}
         </div>
 
         {/* Main Internship Card */}
